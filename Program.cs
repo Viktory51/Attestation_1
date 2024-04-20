@@ -5,3 +5,6 @@
 
 Console.WriteLine("Введите строки массива (для завершения введите пустую строку):");
 string[] originalArray = ReadArrayFromInput();
+
+string[] newArray = new string[originalArray.Length];
+int newArrayIndex = 0;
