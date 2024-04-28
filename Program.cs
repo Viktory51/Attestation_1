@@ -3,7 +3,7 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 
-string[] LessSym(string[] strings)
+string[] finish(string[] strings)
 {
     string[] new_arr = new string[strings.Length];
     for (int i = 0; i < strings.Length; i++)
@@ -11,7 +11,6 @@ string[] LessSym(string[] strings)
         if (strings[i].Length <= 3)
         {
             new_arr[i] = strings[i];
-            // Console.WriteLine(new_arr[i]);
         }
     }
     return new_arr;
@@ -25,10 +24,10 @@ void PrintArray(string[] arr)
     }
 }
 
-string[] strings = { "Hello", "2", "world", ":-)" };
+string[] strings = { "Hello", "world", "i", "am", "Viktory", "555", ":-)" };
 PrintArray(strings);
 Console.WriteLine();
-PrintArray(LessSym(strings));
+PrintArray(finish(strings));
 
 
 
