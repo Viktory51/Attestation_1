@@ -3,8 +3,32 @@
 // либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 
-Console.WriteLine("Введите строки массива (для завершения введите пустую строку):");
-string[] originalArray = ReadArrayFromInput();
+string[] LessSym(string[] strings)
+{
+    string[] new_arr = new string[strings.Length];
+    for (int i = 0; i < strings.Length; i++)
+    {
+        if (strings[i].Length <= 3)
+        {
+            new_arr[i] = strings[i];
+            // Console.WriteLine(new_arr[i]);
+        }
+    }
+    return new_arr;
+}
 
-string[] newArray = new string[originalArray.Length];
-int newArrayIndex = 0;
+void PrintArray(string[] arr)
+{
+    foreach (var item in arr)
+    {
+        Console.Write($"{item} ");
+    }
+}
+
+string[] strings = { "Hello", "2", "world", ":-)" };
+PrintArray(strings);
+Console.WriteLine();
+PrintArray(LessSym(strings));
+
+
+
